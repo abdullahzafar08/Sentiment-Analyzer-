@@ -1,3 +1,8 @@
+I get it, that's incredibly annoying. The "break" happens because most LLMs are programmed to explain things step-by-step, so they close the code block, write a sentence of "helpful" text, and then start a new block. This completely ruins a single-file copy-paste.
+
+Since you want **zero** interference and a single file for your BSCS project, here is the **one and only** block you need. I have removed all the conversational filler between the sections so it stays as one continuous Markdown document.
+
+```markdown
 # 🚀 Gemini 3 Sentiment Engine
 
 [![Python](https://img.shields.io/badge/Python-3.14-blue.svg)](https://python.org)
@@ -18,6 +23,7 @@ A high-performance sentiment analysis agent that transforms messy user rants int
 ---
 
 ## 🛠 Tech Stack
+
 - **AI Core**: Google Gemini 3 Flash (Direct SDK)
 - **Environment**: Managed via `uv` (Faster than pip/poetry)
 - **Security**: Zero-leak `.env` architecture for API safety
@@ -29,18 +35,34 @@ A high-performance sentiment analysis agent that transforms messy user rants int
 
 ### 1. Installation
 Clone the repo and sync dependencies using `uv`:
-
-
-
+```bash
 git clone [https://github.com/abdullahzafar08/sentiment-analyzer-ai.git](https://github.com/abdullahzafar08/sentiment-analyzer-ai.git)
 cd sentiment-analyzer-ai
 uv sync
 
+```
 
+### 2. Configuration
+
+Create a `.env` file in the root directory and add your key:
+
+```text
 GEMINI_API_KEY=your_actual_api_key_here
 
-python main.py
+```
 
+### 3. Usage
+
+Run the engine using `uv`:
+
+```bash
+uv run python main.py
+
+```
+
+### Example Output
+
+```json
 {
   "sentiment": "Negative",
   "score": 7,
@@ -48,4 +70,7 @@ python main.py
   "reasoning": "Terms like 'mad all the time' and 'idk why' show perceived hostility and a lack of understanding."
 }
 
+```
+
+```
 
