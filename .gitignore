@@ -10,3 +10,6 @@ __pycache__/
 
 # Local data
 analysis_*.json
+
+#local storage
+*.db
