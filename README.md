@@ -21,7 +21,9 @@ Raw Text Input → Gemini 3 Flash Processing → Structured JSON Output → Loca
 
 ---
 
-## ![](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Desktop%20Computer.png) Tech Stack
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Desktop%20Computer.png" width="22" align="left" />
+
+## Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -167,6 +169,7 @@ Pull requests welcome. Please ensure:
 - Commit messages are descriptive.
 
 ---
+
 
 
 
