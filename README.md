@@ -126,6 +126,11 @@ Each analysis generates a JSON file with the following structure:
 
 ---
 
+## 💾 Memory Architecture
+This agent features a persistent memory layer built on **SQLite3**. Unlike standard scripts, this engine:
+* **Stores State**: Saves the last user input locally in `memory.db`.
+* **Reliable Fallback**: Uses a custom `MemoryStore` class for high-speed retrieval.
+* **Schema-less Flex**: Utilizes JSON serialization within SQL to store complex data structures without rigid migrations.
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Locked.png" width="25" /> **Security**
 
 - API keys stored in `.env` (excluded from version control)
@@ -142,6 +147,7 @@ Each analysis generates a JSON file with the following structure:
 ✅ Zero-dependency inference (powered by Gemini SDK)  
 ✅ Fast package management with `uv`  
 ✅ Secure API key handling
+✅ Locally stored memories
 
 ---
 
@@ -161,6 +167,7 @@ Pull requests welcome. Please ensure:
 - Commit messages are descriptive.
 
 ---
+
 
 
 
