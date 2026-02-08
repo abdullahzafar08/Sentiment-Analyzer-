@@ -34,7 +34,7 @@ Raw Text Input → Gemini 3 Flash Processing → Structured JSON Output → Loca
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20Places/Rocket.png" width="25" /> **Installation**
+## <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Rocket/3D/rocket_3d.png" width="25" /> **Installation**
 
 ### Prerequisites
 - Python 3.14 or higher
@@ -168,6 +168,7 @@ Pull requests welcome. Please ensure:
 - Commit messages are descriptive.
 
 ---
+
 
 
 
