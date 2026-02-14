@@ -68,6 +68,16 @@ GEMINI_API_KEY=your_actual_api_key_here
 uv run python main.py
 ```
 
+### 🌟 Streamlit Web App
+
+Launch the interactive web interface:
+
+```bash
+streamlit run app.py
+```
+
+![Streamlit UI](assets/streamlit_ui.png)
+
 ### Example Session
 
 ```

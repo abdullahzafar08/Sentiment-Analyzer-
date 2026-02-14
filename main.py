@@ -10,21 +10,15 @@ load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
+class UserInput(BaseModel):
+    text: constr(min_length=1, strip_whitespace=True, max_length=2000)
 
-def analyze_vibe():
-    user_input = input("Enter text to analyze: ").strip()
-
-    class UserInput(BaseModel):
-        text: constr(min_length=1, strip_whitespace=True, max_length=2000)
-
+def analyze_text(text: str):
+    """Analyzes the sentiment of the text using Gemini."""
     try:
-        validated = UserInput(text=user_input)
+        validated = UserInput(text=text)
     except ValidationError as e:
-        print("❌ Input validation error:")
-        print(e)
-        return
-
-    print(f"\n🚀 Sending to Gemini 3 Flash (The Edge of AI)...")
+        return {"error": f"Input validation error: {e}"}
 
     try:
         # 2. Using the model explicitly listed for your key
@@ -49,12 +43,24 @@ def analyze_vibe():
 
         with open(filename, "w") as f:
             json.dump(data, f, indent=4)
-
-        print(f"✅ Success! Saved results to {filename}")
-        print(json.dumps(data, indent=2))
+        
+        return data
 
     except Exception as e:
-        print(f"❌ Error: {e}")
+        return {"error": f"Error: {e}"}
+
+def analyze_vibe():
+    user_input = input("Enter text to analyze: ").strip()
+    
+    print(f"\n🚀 Sending to Gemini 3 Flash (The Edge of AI)...")
+    
+    result = analyze_text(user_input)
+    
+    if "error" in result:
+        print(f"❌ {result['error']}")
+    else:
+        print(f"✅ Success! Saved results.")
+        print(json.dumps(result, indent=2))
 
 
 if __name__ == "__main__":
