@@ -173,11 +173,12 @@ This agent features a persistent memory layer built on **SQLite3**. Unlike stand
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="25" /> **Contributing**
 
 Pull requests welcome. Please ensure:
-- Code follows existing style conventions
-- All tests pass before submission
+- Code follows existing style conventions.
+- All tests pass before submission.
 - Commit messages are descriptive.
 
 ---
+
 
 
 
